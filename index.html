@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <style>
+      td,
+      th {
+         border: 0px solid black;
+      }
+
+      img {
+         padding: 5px;
+      }
+   </style>
+   <title>SAGA: Source Attribution of Generative AI Videos</title>
+
+   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+   <link rel="stylesheet" href="./static/css/bulma.min.css">
+   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+   <link rel="stylesheet" href="./static/css/index.css">
+   <link rel="icon" href="./static/images/favicon.svg">
+   <link rel="stylesheet" href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css">
+   <link rel="stylesheet" href="css/app.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script defer src="./static/js/fontawesome.all.min.js"></script>
+   <script src="./static/js/bulma-carousel.min.js"></script>
+   <script src="./static/js/bulma-slider.min.js"></script>
+   <script src="./static/js/index.js"></script>
+   <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<!-- <body>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+            <a class="navbar-item" href="https://keunhong.com">
+            <span class="icon">
+                <i class="fas fa-home"></i>
+            </span>
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More Research
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="https://hypernerf.github.io">
+                  HyperNeRF
+                </a>
+                <a class="navbar-item" href="https://nerfies.github.io">
+                  Nerfies
+                </a>
+                <a class="navbar-item" href="https://latentfusion.github.io">
+                  LatentFusion
+                </a>
+                <a class="navbar-item" href="https://photoshape.github.io">
+                  PhotoShape
+                </a>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </nav> -->
+<section class="hero">
+   <div class="hero-body">
+      <div class="container is-max-desktop">
+         <div class="columns is-centered">
+            <div class="column has-text-centered">
+               <h1 class="title is-1 publication-title" , style="color:purple;">SAGA:</h1>
+               <h1 class="title is-4 publication-title">Source Attribution of Generative AI Videos</h1>
+               <div class="is-size-5 publication-authors">
+                  <span class="author-block">
+                     <a target="_blank" href="https://rohit-kundu.github.io/">Rohit Kundu</a><sup>1,2</sup>,</span>
+                  <span class="author-block">
+                    <a target="_blank" href="https://sites.google.com/view/vishalmohanty/">Vishal Mohanty</a><sup>2</sup>,</span>
+                 <span class="author-block">
+                  <a target="_blank" href="https://shanface33.github.io/">Shan Jia</a><sup>2</sup>,</span>
+               <span class="author-block">
+                     <a target="_blank" href="https://scholar.google.com/citations?user=05976DAAAAAJ&hl=en&oi=ao">Hao Xiong</a><sup>3</sup>,</span>
+                  <span class="author-block">
+                     <a target="_blank" href="https://www.linkedin.com/in/athulab/">Athula Balachandran</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                     <a target="_blank" href="https://vcg.ece.ucr.edu/amit">Amit K. Roy-Chowdhury</a><sup>1</sup></span>
+                  </span>
+               </div>
+               <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>University of California, Riverside</span>,
+                  <span class="author-block"><sup>2</sup>YouTube (Google)</span>,
+                  <span class="author-block"><sup>3</sup>Google DeepMind</span>
+               </div>
+                   <div class="is-size-5 column has-text-centered">
+                     <a target="_blank" href="https://cvpr.thecvf.com/Conferences/2026"><b>CVPR 2026</b></a>
+                     </span>
+                     </div>
+               <div class="column has-text-centered">
+                  <div class="publication-links">
+                     <!-- PDF Link. -->
+                     <!-- <span class="link-block">
+                        <a target="_blank" href="https://arxiv.org/pdf/2511.12834"
+                           class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="fas fa-file-pdf"></i>
+                           </span>
+                           <span>Paper (PDF)</span>
+                        </a>
+                     </span> -->
+                     <span class="link-block">
+                        <a target="_blank" href="https://arxiv.org/pdf/2511.12834"
+                           class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="ai ai-arxiv"></i>
+                           </span>
+                           <span>arXiv</span>
+                        </a>
+                     </span>
+                     <span class="link-block">
+                        <a target="_blank" href="static/Supplementary.pdf"
+                           class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="fas fa-file-pdf"></i>
+                           </span>
+                           <span>Supplementary Material</span>
+                        </a>
+                     </span>
+                     <!-- <span class="link-block">
+                        <a target="_blank" href="static/cvpr25_poster_unite.png"
+                           class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="far fa-images"></i>
+                           </span>
+                           <span>Poster</span>
+                        </a>
+                     </span> -->
+                     <!-- Video Link.
+                     <span class="link-block">
+                        <a href="https://www.youtube.com/watch?v=k7xFbELpnv4"
+                           class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="fab fa-youtube"></i>
+                           </span>
+                           <span>Video (YouTube)</span>
+                        </a>
+                     </span> -->
+
+                     <!-- Dataset Link. -->
+                     <!-- <span class="link-block"> -->
+                        <!-- <a href="static/cvpr25_poster_unite.png"
+                           class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="far fa-images"></i>
+                           </span>
+                           <span>Poster</span>
+                        </a> -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="hero teaser">
+   <div class="container is-max-desktop">
+      <div class="hero-body">
+         <img class="round center-image" style="width:1000px;" src="static/images/teaser.png" />
+         <h2 class="subtitle has-text-justified">
+            <span class="dnerf"></span> <b>Data-Efficient & Interpretable AI Video Source Attribution.</b> (a) Temporal Attention Signatures (<span class="methodname">T-Sigs</span>): <span class="methodname">SAGA</span> pioneers AI video source attribution. Our novel <span class="methodname">T-Sigs</span> provide interpretability, showing unique fingerprints for Real, Seen, and even Unseen generators. (b) Feature Separability: t-SNE visualization of learned features demonstrates clear generator clusters. (c) Multi-Granular Performance & Data Efficiency: <span class="methodname">SAGA</span> excels across 5 attribution levels. Radar chart shows our 2-stage training method using the Hard Negative Mining (HNM) objective, using only 0.5% labeled data, matches fully supervised performance and surpasses baselines.
+            <!-- <b>Problem Overview</b>: Existing DeepFake detection methods focus on identifying face-manipulated videos, most of which cannot perform inference unless there is a face detected in the video. However, with advancements like seamless background modifications (e.g., AVID) and hyper-realistic content from games like GTA-V and T2V/I2V models, a more comprehensive approach is needed. A model trained with only cross-entropy (CE) loss, using full frames, automatically focuses on the face, capturing temporal discontinuities through its transformer architecture, performing better than random (\( \approx \)) on T2V/I2V content but struggling with background manipulations. <span class="methodname">UNITE</span>, with its attention-diversity (AD) loss, effectively detects both face/background manipulations and fully synthetic content. -->
+         </h2>
+      </div>
+   </div>
+</section>
+
+<section class="section">
+   <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+         <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+                The proliferation of generative AI has led to hyper-realistic synthetic videos, escalating misuse risks and outstripping binary real/fake detectors. We introduce <span class="methodname">SAGA</span> (<u>S</u>ource <u>A</u>ttribution of <u>G</u>enerative <u>A</u>I videos), the first comprehensive framework to address the urgent need for AI-generated <i>video source attribution</i> at a large scale. Unlike traditional detection, <span class="methodname">SAGA</span> identifies the specific generative model used. It uniquely provides multi-granular attribution across five levels: authenticity, generation task (e.g., T2V/I2V), model version, development team, and the precise generator, offering far richer forensic insights. Our novel video transformer architecture, leveraging features from a robust vision foundation model, effectively captures spatio-temporal artifacts. Critically, we introduce a data-efficient pretrain-and-attribute strategy, enabling <span class="methodname">SAGA</span> to achieve state-of-the-art attribution using only 0.5% of source-labeled data per class, matching fully supervised performance. Furthermore, we propose Temporal Attention Signatures (<span class="methodname">T-Sigs</span>), a novel interpretability method that visualizes learned temporal differences, offering the first explanation for <i>why</i> different video generators are distinguishable. Extensive experiments on public datasets, including cross-domain scenarios, demonstrate that <span class="methodname">SAGA</span> sets a new benchmark for synthetic video provenance, providing crucial, interpretable insights for forensic and regulatory applications.
+               </p>
+            </div>
+         </div>
+      </div>
+      <!--/ Abstract. -->
+      
+      <!-- Method. -->
+      <section class="section">
+         <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+               <div class="column is-four-fifths">
+                  <h2 class="title is-3">Method</h2>
+               </div>
+            </div>
+         </div>
+         <div class="hero-body">
+             <img class="round center-image" style="width:900px;" src="./static/images/overall.png" alt="overall" />
+         </div>
+         <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <div class="content has-text-justified">
+                    <p class="subtitle has-text-justified">
+                       <span class="dnerf"></span><b>Overall framework of <span class="methodname">SAGA</span></b> with a two-stage training approach. In Stage-1, each video \(x_k\) with real/fake labels is processed through a frozen foundational vision encoder to extract image-level features \(z_m\), which are stacked in temporal order to form the video representation \(\zeta_k\). Positional encoding is added, and the sequence is passed through our video transformer architecture \(\theta\) to obtain \(\phi_k\). The classifier \(\beta_1\) maps \(\phi_k\) to real or fake classes using a cross-entropy loss (\(\mathcal{L}_{CE}\)). In Stage-2, the pretrained video transformer is adapted for attribution into \(n_c\) classes (\(n_c\) defined by the attribution task) using only 0.5% of source-labeled data. Stage-2 incorporates an additional hard negative mining objective (\(\mathcal{L}_{\text{HNM}}\)) along with \(\mathcal{L}_{CE}\) for the attribution task.
+                    </p>
+                    &nbsp;
+                </div>
+              </div>
+            </div>
+         </div>
+
+         
+         <div class="hero-body">
+             <img class="round center-image" style="width:900px;" src="./static/images/attribution_defns.png" alt="attribution_defns" />
+         </div>
+         <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <div class="content has-text-justified">
+                    <p class="subtitle has-text-justified">
+                       <span class="dnerf"></span><b>Definition of Attribution Levels</b> on the DeMamba dataset. We define five levels of attribution for synthetic videos: (1) Authenticity: Real vs. Fake (2 classes), (2) Generation Task: real vs. T2V vs. I2V (3 classes), (3) Stable Diffusion Backbone Version: e.g., SD 1.4 vs. SD 1.5 vs. SD 2.1 vs. SDXL (real vs. 4 total versions), (4) Development Team: e.g., Alibaba Group vs. Tencent AI Lab vs. ... (real vs. 14 different teams), and (5) Precise Generator: e.g., ZeroScope vs. I2VGen-XL vs. ... (real vs. 19 different video generator models). Each level provides increasingly granular insights into the source of the synthetic video, with the precise generator level offering the most specific attribution. <i>Check our supplementary material for more information.</i>
+                    </p>
+                    &nbsp;
+                </div>
+              </div>
+            </div>
+         </div>
+      </section>
+      <!--/ Method. -->
+
+      <!-- Results. -->
+      <section class="hero">
+         <div class="hero-body">
+            <div class="container is-max-desktop">
+               <div class="columns is-centered has-text-centered">
+                  <div class="column is-four-fifths">
+                     <h2 class="title is-3">Results</h2>
+                     <div class="content has-text-justified">
+                        <center>
+                           <img src="static/images/gen_l.png" alt="results_generator_level" border=0 height=200 width=1500 />
+                        </center>
+                        <p class="subtitle has-text-justified">
+                           <b><u><span style="color: #FF8C00">GEN-L</span> classification results (Accuracy)</u></b> with different settings of the <span class="methodname">SAGA</span></b> framework. <span class="methodname">SAGA</span></b> is able to achieve results close to the <span style="font-variant-numeric: tabular-nums;">100%</span> setting, by only using 0.5% of source-labeled data (the 100% data setting has ~1.6M training samples). In many cases (as highlighted), the performance drops close to 0.00% for certain difficult generators, but the ℒ<sub>HNM</sub> objective mitigates these missed detections even while using a small fraction of the data, especially with the proposed 2-stage training.
+                           <br>
+                           <br>
+                        
+                        <p class="subtitle has-text-justified">
+                            <i>Quantitative results for the other attribution levels are in our main paper Tables 2-6.</i>
+                           <br>
+                           <br>
+
+                        <center>
+                           <img src="static/images/tsne_analysis.png" alt="tsne_analysis" border=0 width=750 />
+                        </center>
+                        <p class="subtitle has-text-justified">
+                          <b><u>t-SNE visualization</u></b> of <span class="methodname">SAGA</span></b>'s learned representations trained on the
+                          (a-b)<span style="color: olive">TASK-L</span>,
+                          (c-d)<span style="color: violet">BIN-L</span>,
+                          (e-f)<span style="color: cyan">SD-L</span>, and
+                          (g-h)<span style="color: purple">TEAM-L</span>
+                          attribution tasks, respectively. Even when supervised at coarser levels, <span class="methodname">SAGA</span></b> distinctly clusters individual generators, revealing strong fine-grained discriminative ability.
+                           <br>
+                           <br>
+
+                        <center>
+                           <img src="static/images/tsne_gen_l.png" alt="tsne_generator_level" border=0 height=200 width=1500 />
+                        </center>
+                        <p class="subtitle has-text-justified">
+                          <b><u>t-SNE visualization of <span class="methodname">SAGA</span> on the <span style="color: #FF8C00">GEN-L</span> attribution task</u></b> with different loss functions. The HNM objective clearly helps in separability of the different generators, compared to using only the CE loss or the semi-HNM objective.
+                           <br>
+                           <br>
+
+                        <center>
+                           <img src="static/images/temporal_attn.png" alt="temporal_attention" border=0 height=200 width=600 />
+                        </center>
+                        <p class="subtitle has-text-justified">
+                            <b><u><span class="methodname">T-Sigs</span></u></b> for classes in the different attribution levels. Each class produces a distinct and consistent temporal attention signature, which provides interpretability to the model's predictions and insights into the unique temporal artifacts of different generators.
+                           <br>
+                           <br>
+
+                        <p class="subtitle has-text-justified">
+                            <i>Check our main paper and supplementary for more detailed results, analyses and ablations.</i>
+                           <br>
+                           <br>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+      <!-- /Results. -->
+       
+      <!-- People. -->
+      <section class="hero">
+         <div class="hero-body">
+            <div class="container is-max-desktop">
+               <div class="columns is-centered has-text-centered">
+                  <div class="column is-four-fifths">
+                     <h2 class="title is-3">Authors</h2>
+                     <div class="columns is-multiline is-centered">
+                        <!-- Author 1 -->
+                        <div class="column is-one-sixth">
+                           <figure class="image is-128x128 is-inline-block">
+                              <a target="_blank" href="https://rohit-kundu.github.io/">
+                              <img class="is-rounded" src="static/authors/rohit.jpg" alt="Rohit Kundu">
+                              </a>
+                           </figure>
+                           <p><b>Rohit Kundu</b></p>
+                           <!-- <p><a href="https://rohit-kundu.github.io/">Website</a></p> -->
+                        </div>
+                        <!-- Author 2 -->
+                        <div class="column is-one-sixth">
+                           <figure class="image is-128x128 is-inline-block">
+                              <a target="_blank" href="https://sites.google.com/view/vishalmohanty/">
+                              <img class="is-rounded" src="static/authors/vishal.jpg" alt="Vishal Mohanty">
+                              </a>
+                           </figure>
+                           <p><b>Vishal Mohanty</b></p>
+                        </div>
+                        <!-- Author 3 -->
+                        <div class="column is-one-sixth">
+                           <figure class="image is-128x128 is-inline-block">
+                              <a target="_blank" href="https://scholar.google.com/citations?user=05976DAAAAAJ&hl=en&oi=ao">
+                              <img class="is-rounded" src="static/authors/hao.jpg" alt="Hao Xiong">
+                              </a>
+                           </figure>
+                           <p><b>Hao Xiong</b></p>
+                        </div>
+                        <!-- Author 4 -->
+                        <div class="column is-one-sixth">
+                           <figure class="image is-128x128 is-inline-block">
+                              <a target="_blank" href="https://shanface33.github.io/">
+                              <img class="is-rounded" src="static/authors/shan.png" alt="Shan Jia">
+                              </a>
+                           </figure>
+                           <p><b>Shan Jia</b></p>
+                        </div>
+                        <!-- Author 5 -->
+                        <div class="column is-one-sixth">
+                           <figure class="image is-128x128 is-inline-block">
+                              <a target="_blank" href="https://www.linkedin.com/in/athulab/">
+                              <img class="is-rounded" src="static/authors/athula.png" alt="Athula Balachandran">
+                              </a>
+                           </figure>
+                           <p><b>Athula Balachandran</b></p>
+                        </div>
+                        <!-- Author 6 -->
+                        <div class="column is-one-sixth">
+                           <figure class="image is-128x128 is-inline-block">
+                              <a target="_blank" href="https://vcg.ece.ucr.edu/amit">
+                              <img class="is-rounded" src="static/authors/amit.avif" alt="Amit K. Roy-Chowdhury">
+                              </a>
+                           </figure>
+                           <p><b>Amit K. Roy-Chowdhury</b></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+       
+      <!-- BibTeX. -->
+            <section class="section" id="BibTeX">
+               <div class="container is-max-desktop content">
+                  <h2 class="title">BibTeX</h2>
+                  <pre><code>@inproceedings{kundu2026saga,
+  title={SAGA: Source Attribution of Generative AI Videos},
+  author={Kundu, Rohit and Mohanty, Vishal and Xiong, Hao and Jia, Shan and Balachandran, Athula and Roy-Chowdhury, Amit K},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition (CVPR) Conference},
+  year={2026}
+}</code></pre>
+               </div>
+            </section>
+            <script>
+               const viewers = document.querySelectorAll(".image-compare");
+               viewers.forEach((element) => {
+                  let view = new ImageCompare(element, {
+                     hoverStart: true,
+                     addCircle: true
+                  }).mount();
+               });
+
+               $(document).ready(function () {
+                  var editor = CodeMirror.fromTextArea(document.getElementById("bibtex"), {
+                     lineNumbers: false,
+                     lineWrapping: true,
+                     readOnly: true
+                  });
+                  $(function () {
+                     $('[data-toggle="tooltip"]').tooltip()
+                  })
+               });
+            </script>
+            <br>
+      <!-- /BibTeX. -->
+
+            <!-- Footers. -->
+            <!-- <p style="text-align:center"> <img
+                  src="https://badges.toozhao.com/badges/01HTTX5CCFCP5V35WK5JYTW63R/green.svg" /> </a></p> -->
+
+            <p style="text-align:center"> Copyright: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CC
+                  BY-NC-SA 4.0</a> © Rohit Kundu | Last updated: 21 Feb 2026 | Website credits to  <a
+                  href="https://nerfies.github.io/"> Nerfies</a></a></p>
+            </body>
+
+</html>
